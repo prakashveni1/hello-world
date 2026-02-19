@@ -1,0 +1,6 @@
+name: Reusable Parent Workflow
+on: workflow_dispatch
+
+jobs:
+  call-child:
+    uses: ./.github/workflows/reusable-child.yml
