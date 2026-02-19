@@ -1,0 +1,11 @@
+name: Workflow B
+on:
+  workflow_run:
+    workflows: ["Workflow A"]
+    types: [completed]
+
+jobs:
+  job-b:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Second workflow after A"
